@@ -7,6 +7,8 @@ import {
   faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
+import './PostDetail.css';
+
 const PostDetail = () => {
   return (
     <Layout>

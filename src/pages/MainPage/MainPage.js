@@ -1,15 +1,20 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import MessageBox from '../../components/MessageBox/MessageBox';
 import Layout from '../../components/Layout/Layout';
 import Post from '../../components/Post/Post';
 
 const MainPage = () => {
+  const { push } = useHistory();
+
+  const handleGoToPostDetail = () => push('/tweet');
+
   return (
     <Layout>
       <MessageBox />
       <div className='content'>
-        <Post />
+        <Post onGoToPostDetail={handleGoToPostDetail} />
         <Post />
         <Post />
         <Post />
