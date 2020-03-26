@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './App.css';
-import Routes from './routes';
+import MainPage from './pages/MainPage/MainPage';
 
 const App = () => {
-  return <Routes />;
+  return <MainPage />;
 };
 
 export default App;
