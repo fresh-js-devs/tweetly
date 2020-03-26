@@ -8,7 +8,7 @@ import {
 
 import './Post.css';
 
-const Post = ({ onGoToPostDetail }) => {
+const Post = ({ onGoToPostDetail, user, body }) => {
   return (
     <div onClick={onGoToPostDetail} className='post'>
       <div className='post__profile'>
@@ -19,16 +19,11 @@ const Post = ({ onGoToPostDetail }) => {
       </div>
       <div className='post__content'>
         <div className='post__content-header'>
-          <h4>Some interesting guy</h4>
-          <span className='profile-name'>@someInterestingGuy</span>
+          <h4>{user}</h4>
+          <span className='profile-name'>@{user}</span>
           <span className='post-added'>40s</span>
         </div>
-        <div className='post__message'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-          exercitationem vitae qui maxime facere vero animi dicta? Dolorem alias
-          repellendus impedit et eligendi nulla repudiandae delectus explicabo?
-          Blanditiis, asperiores ex.
-        </div>
+        <div className='post__message'>{body}</div>
         <div className='post__action-buttons'>
           <FontAwesomeIcon icon={faComment} />
           <FontAwesomeIcon icon={faRetweet} />

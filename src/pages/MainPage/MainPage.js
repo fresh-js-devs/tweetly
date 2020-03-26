@@ -17,7 +17,12 @@ const MainPage = () => {
       <MessageBox />
       <div className='content'>
         {tweets.map(({ id, user, body }) => (
-          <Post onGoToPostDetail={handleGoToPostDetail} />
+          <Post
+            key={id}
+            user={user}
+            body={body}
+            onGoToPostDetail={handleGoToPostDetail}
+          />
         ))}
       </div>
     </Layout>
