@@ -5,6 +5,8 @@ import MessageBox from '../../components/MessageBox/MessageBox';
 import Layout from '../../components/Layout/Layout';
 import Post from '../../components/Post/Post';
 
+import tweets from '../../mocks/tweets.json';
+
 const MainPage = () => {
   const { push } = useHistory();
 
@@ -14,13 +16,9 @@ const MainPage = () => {
     <Layout>
       <MessageBox />
       <div className='content'>
-        <Post onGoToPostDetail={handleGoToPostDetail} />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {tweets.map(({ id, user, body }) => (
+          <Post onGoToPostDetail={handleGoToPostDetail} />
+        ))}
       </div>
     </Layout>
   );
