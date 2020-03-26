@@ -10,7 +10,7 @@ import tweets from '../../mocks/tweets.json';
 const MainPage = () => {
   const { push } = useHistory();
 
-  const handleGoToPostDetail = () => push('/tweet');
+  const handleGoToPostDetail = id => push(`/tweet/${id}`);
 
   return (
     <Layout>
@@ -21,7 +21,7 @@ const MainPage = () => {
             key={id}
             user={user}
             body={body}
-            onGoToPostDetail={handleGoToPostDetail}
+            onGoToPostDetail={() => handleGoToPostDetail(id)}
           />
         ))}
       </div>

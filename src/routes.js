@@ -8,7 +8,7 @@ export default () => (
   <BrowserRouter>
     <Switch>
       <Route exact path='/' component={MainPage} />
-      <Route path='/tweet' component={PostDetail} />
+      <Route path='/tweet/:id' component={PostDetail} />
     </Switch>
   </BrowserRouter>
 );
