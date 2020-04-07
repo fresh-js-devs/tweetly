@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory, NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faRetweet, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +7,11 @@ import { faRetweet, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../../components/Layout/Layout";
 import "./PostDetail.css";
 
-const PostDetail = ({onGoToPostDetail}) => {
+const PostDetail = () => {
     const { goBack } = useHistory();
     
     return (
-        <div onClick={onGoToPostDetail}>
+        <div>
             <Layout>
                 <div className="post-detail">
                     <div className="post-detail__header">

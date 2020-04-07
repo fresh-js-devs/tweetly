@@ -8,9 +8,9 @@ import {
 
 import './Post.css';
 
-const Post = () => {
+const Post = ({onGoToPostDetail}) => {
   return (
-    <div className='post'>
+    <div  onClick={onGoToPostDetail} className='post'>
       <div className='post__profile'>
         <img
           src='https://randomuser.me/api/portraits/women/11.jpg'
