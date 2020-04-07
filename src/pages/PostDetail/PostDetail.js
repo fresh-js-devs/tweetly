@@ -11,7 +11,7 @@ const PostDetail = ({onGoToPostDetail}) => {
     const { goBack } = useHistory();
     
     return (
-        <div onClick={onGoToPostDetail} className='post'>
+        <div onClick={onGoToPostDetail}>
             <Layout>
                 <div className="post-detail">
                     <div className="post-detail__header">
