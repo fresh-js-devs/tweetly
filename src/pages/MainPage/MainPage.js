@@ -17,7 +17,7 @@ const MainPage = () => {
     <Layout>
       <MessageBox />
       <div className='content'>
-        <Post />
+        <Post onGoToPostDetail={handleGoToPostDetail}/>
         <Post />
         <Post />
         <Post />
